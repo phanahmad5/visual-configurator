@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="100%" height="100%">
+  <!-- Inner Collar Shadow -->
+  <path d="M 205,92 Q 240,78 275,92 Q 240,84 205,92 Z" fill="#1e293b" opacity="0.3" />
+
+  <!-- Base Jersey Body & Sleeves (jersey-bg - Full Silhouette Clip Area) -->
+  <path class="jersey-bg" d="M 205,92 Q 240,78 275,92 L 368,122 L 424,198 L 376,224 L 332,192 Q 320,315 330,442 Q 240,454 150,442 Q 160,315 148,192 L 104,224 L 56,198 L 112,122 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" stroke-linejoin="round" />
+
+  <!-- Sleeve Cuffs (jersey-accent) -->
+  <!-- Left Sleeve Cuff -->
+  <path class="jersey-accent" d="M 56,198 L 104,224 L 97,236 L 49,210 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.5" />
+  <!-- Right Sleeve Cuff -->
+  <path class="jersey-accent" d="M 424,198 L 376,224 L 383,236 L 431,210 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.5" />
+
+  <!-- Polo: Higher collar band (visible from back, taller than O-Neck) (jersey-collar) -->
+  <path class="jersey-collar" d="M 275,92 Q 240,78 205,92 L 198,68 Q 240,48 282,68 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.5" />
+  <!-- Inner collar band (jersey-collar) -->
+  <path class="jersey-collar" d="M 275,92 Q 240,82 205,92 L 200,78 Q 240,62 280,78 Z" fill="#e2e8f0" />
+
+  <!-- Seam Lines -->
+  <path d="M 112,122 L 148,192" stroke="#000000" stroke-width="1.2" stroke-opacity="0.15" fill="none" />
+  <path d="M 368,122 L 332,192" stroke="#000000" stroke-width="1.2" stroke-opacity="0.15" fill="none" />
+  <path d="M 205,92 L 112,122" stroke="#000000" stroke-width="1.2" stroke-opacity="0.15" fill="none" />
+  <path d="M 275,92 L 368,122" stroke="#000000" stroke-width="1.2" stroke-opacity="0.15" fill="none" />
+
+  <!-- Stitching Details -->
+  <path d="M 203,95 L 114,124" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3" stroke-opacity="0.6" fill="none" />
+  <path d="M 277,95 L 366,124" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3" stroke-opacity="0.6" fill="none" />
+  <path d="M 59,200 L 102,223" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3" stroke-opacity="0.5" fill="none" />
+  <path d="M 421,200 L 378,223" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3" stroke-opacity="0.5" fill="none" />
+  <path d="M 152,434 Q 240,446 328,434" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,3" stroke-opacity="0.6" fill="none" />
+  <path d="M 152,438 Q 240,450 328,438" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,3" stroke-opacity="0.6" fill="none" />
+  <path d="M 150,442 Q 240,454 330,442" stroke="#000000" stroke-width="1.5" stroke-opacity="0.2" fill="none" />
+</svg>

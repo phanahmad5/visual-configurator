@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="100%" height="100%">
+  <!-- Inner Shadow -->
+  <path d="M 214,88 Q 240,98 266,88" fill="#1e293b" opacity="0.2" />
+
+  <!-- Base Jersey Body & Sleeves (jersey-bg - Full Silhouette Clip Area) -->
+  <path class="jersey-bg" d="M 210,88 Q 240,104 270,88 L 368,122 L 424,198 L 376,224 L 332,192 Q 320,315 330,442 Q 240,454 150,442 Q 160,315 148,192 L 104,224 L 56,198 L 112,122 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" stroke-linejoin="round" />
+
+  <!-- Sleeve Cuffs (jersey-accent) -->
+  <!-- Left Sleeve Cuff -->
+  <path class="jersey-accent" d="M 56,198 L 104,224 L 97,236 L 49,210 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.5" />
+  <!-- Right Sleeve Cuff -->
+  <path class="jersey-accent" d="M 424,198 L 376,224 L 383,236 L 431,210 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.5" />
+
+  <!-- Shanghai/Mandarin Standing Collar: Left piece (jersey-collar) -->
+  <path class="jersey-collar" d="M 210,88 L 208,62 Q 220,56 228,62 L 228,86 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.5" />
+  <!-- Shanghai/Mandarin Standing Collar: Right piece (jersey-collar) -->
+  <path class="jersey-collar" d="M 270,88 L 272,62 Q 260,56 252,62 L 252,86 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.5" />
+  <!-- Collar band connecting at back (jersey-collar) -->
+  <path class="jersey-collar" d="M 270,88 Q 240,78 210,88 L 208,76 Q 240,64 272,76 Z" fill="#e2e8f0" />
+
+  <!-- Center front closure line -->
+  <line x1="240" y1="86" x2="240" y2="62" stroke="#cbd5e1" stroke-width="0.8" />
+
+  <!-- Seam Lines -->
+  <path d="M 112,122 L 148,192" stroke="#000000" stroke-width="1.2" stroke-opacity="0.15" fill="none" />
+  <path d="M 368,122 L 332,192" stroke="#000000" stroke-width="1.2" stroke-opacity="0.15" fill="none" />
+  <path d="M 210,88 L 112,122" stroke="#000000" stroke-width="1.2" stroke-opacity="0.15" fill="none" />
+  <path d="M 270,88 L 368,122" stroke="#000000" stroke-width="1.2" stroke-opacity="0.15" fill="none" />
+
+  <!-- Stitching Details -->
+  <path d="M 208,91 L 114,124" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3" stroke-opacity="0.6" fill="none" />
+  <path d="M 272,91 L 366,124" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3" stroke-opacity="0.6" fill="none" />
+  <path d="M 59,200 L 102,223" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3" stroke-opacity="0.5" fill="none" />
+  <path d="M 421,200 L 378,223" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3" stroke-opacity="0.5" fill="none" />
+  <path d="M 152,434 Q 240,446 328,434" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,3" stroke-opacity="0.6" fill="none" />
+  <path d="M 152,438 Q 240,450 328,438" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,3" stroke-opacity="0.6" fill="none" />
+  <path d="M 150,442 Q 240,454 330,442" stroke="#000000" stroke-width="1.5" stroke-opacity="0.2" fill="none" />
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="100%" height="100%">
+  <!-- Base Jersey Body (jersey-bg) -->
+  <path class="jersey-bg" d="M 210,95 Q 240,82 270,95 L 360,115 L 420,185 L 380,215 L 330,185 Q 320,310 330,440 Q 240,455 150,440 Q 160,310 150,185 L 100,215 L 60,185 L 120,115 Z" fill="#10b981" stroke="#cbd5e1" stroke-width="2" />
+  
+  <!-- Accent Side Panels and Trim (jersey-accent) -->
+  <!-- Left Side Panel -->
+  <path class="jersey-accent" d="M 150,185 Q 160,310 150,440 L 168,440 Q 178,310 168,185 Z" fill="#34d399" />
+  <!-- Right Side Panel -->
+  <path class="jersey-accent" d="M 330,185 Q 320,310 330,440 L 312,440 Q 302,310 312,185 Z" fill="#34d399" />
+  <!-- Left Sleeve Cuff -->
+  <path class="jersey-accent" d="M 60,185 L 100,215 L 94,222 L 54,192 Z" fill="#34d399" />
+  <!-- Right Sleeve Cuff -->
+  <path class="jersey-accent" d="M 420,185 L 380,215 L 386,222 L 426,192 Z" fill="#34d399" />
+
+  <!-- Collar and Neck Ribbing (jersey-collar) -->
+  <!-- Back Neck Collar Band -->
+  <path class="jersey-collar" d="M 270,95 Q 240,82 210,95 L 206,85 Q 240,72 274,85 Z" fill="#047857" />
+</svg>

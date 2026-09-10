@@ -16,16 +16,24 @@ return new class extends Migration
             $table->id();
 
             // Nama motif
-            $table->string('nama');
+            $table->string('nama')->nullable();
+            $table->string('name')->nullable();
 
             // Kategori motif
-            $table->string('kategori');
+            $table->string('kategori')->nullable();
+            $table->string('category')->nullable();
+
+            // Tema & Warna
+            $table->string('theme')->nullable();
+            $table->string('color')->nullable();
 
             // Nama file gambar
             $table->string('image_name')->nullable();
 
             // Lokasi penyimpanan file
-            $table->string('path_file');
+            $table->string('path_file')->nullable();
+            $table->string('image_front')->nullable();
+            $table->string('image_back')->nullable();
 
             // Deskripsi motif
             $table->text('description')->nullable();

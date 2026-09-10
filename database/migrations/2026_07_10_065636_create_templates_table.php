@@ -24,7 +24,11 @@ return new class extends Migration
             $table->string('color');
 
             // File gambar preview template (kartu rekomendasi)
-            $table->string('image_path');
+            $table->string('preview_front')->nullable();
+            $table->string('preview_back')->nullable();
+            $table->json('design_data')->nullable();
+
+            $table->string('image_path')->nullable();
 
             // File gambar desain transparan template (canvas overlay)
             $table->string('design_path')->nullable();

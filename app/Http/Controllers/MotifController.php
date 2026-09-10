@@ -12,8 +12,12 @@ class MotifController extends Controller
     {
         $query = Motif::where('is_active', true);
 
-        if ($request->filled('category')) {
-            $query->where('category', $request->query('category'));
+        $category = $request->query('category') ?? $request->query('kategori');
+        if ($category) {
+            $query->where(function ($q) use ($category) {
+                $q->where('category', $category)
+                  ->orWhere('kategori', $category);
+            });
         }
 
         $motifs = $query->get();

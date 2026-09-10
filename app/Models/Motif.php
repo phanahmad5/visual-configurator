@@ -8,11 +8,16 @@ class Motif extends Model
 {
     protected $fillable = [
         'name',
+        'nama',
         'category',
+        'kategori',
         'theme',
         'color',
+        'image_name',
+        'path_file',
         'image_front',
         'image_back',
+        'description',
         'is_active',
     ];
 
@@ -22,16 +27,31 @@ class Motif extends Model
 
     public function getNamaAttribute()
     {
-        return $this->name;
+        return $this->attributes['nama'] ?? $this->attributes['name'] ?? null;
+    }
+
+    public function getNameAttribute()
+    {
+        return $this->attributes['name'] ?? $this->attributes['nama'] ?? null;
     }
 
     public function getKategoriAttribute()
     {
-        return $this->category;
+        return $this->attributes['kategori'] ?? $this->attributes['category'] ?? null;
+    }
+
+    public function getCategoryAttribute()
+    {
+        return $this->attributes['category'] ?? $this->attributes['kategori'] ?? null;
     }
 
     public function getPathFileAttribute()
     {
-        return $this->image_front;
+        return $this->attributes['path_file'] ?? $this->attributes['image_front'] ?? null;
+    }
+
+    public function getImageFrontAttribute()
+    {
+        return $this->attributes['image_front'] ?? $this->attributes['path_file'] ?? null;
     }
 }

@@ -93,19 +93,8 @@
                                         {{ $motif->nama }}
                                     </td>
                                     <td class="px-5 py-4 whitespace-nowrap">
-                                        @php
-                                            $catClassMap = [
-                                                'logo' => 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20',
-                                                'pattern' => 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20',
-                                                'ornament' => 'bg-amber-500/10 text-amber-400 border border-amber-500/20',
-                                                'badge' => 'bg-purple-500/10 text-purple-400 border border-purple-500/20',
-                                                'icon' => 'bg-rose-500/10 text-rose-400 border border-rose-500/20',
-                                            ];
-                                            $catClean = strtolower($motif->kategori);
-                                            $badgeClass = $catClassMap[$catClean] ?? 'bg-slate-900 text-slate-300 border border-slate-700';
-                                        @endphp
-                                        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold uppercase {{ $badgeClass }}">
-                                            {{ $motif->kategori }}
+                                        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold uppercase bg-slate-900 text-slate-300 border border-slate-700">
+                                            {{ $motif->kategori ?? $motif->category ?? '-' }}
                                         </span>
                                     </td>
                                     <td class="px-5 py-4 max-w-xs truncate text-slate-400 text-xs">

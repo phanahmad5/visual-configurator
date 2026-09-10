@@ -20,7 +20,7 @@ class TemplateController extends Controller
     ];
 
     public static $themes = [
-        'sporty', 'vintage', 'minimalis', 'retro', 'kasual', 'futuristic'
+        'sporty', 'vintage', 'minimalis', 'retro', 'kasual'
     ];
 
     public static $collarTypes = ['vneck', 'oneck', 'polo', 'henley'];

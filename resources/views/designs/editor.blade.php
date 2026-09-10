@@ -558,7 +558,6 @@
                                         <option value="kasual">Kasual</option>
                                         <option value="sporty">Sporty</option>
                                         <option value="vintage">Vintage</option>
-                                        <option value="futuristic">Futuristic</option>
                                     @endif
                                 </select>
                                 <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2.5 text-slate-400">
@@ -2573,20 +2572,54 @@
             }
 
             function syncRecommendationPreferences() {
-                // Initialize default selections if not already selected by user
+                // Always force recCategory to match currentModel
                 const recCategory = document.getElementById('recCategory');
                 const recColor = document.getElementById('recColor');
 
-                if (recCategory && (!recCategory.value || !hasLoadedRecommendations)) {
+                if (recCategory) {
                     recCategory.value = (currentModel === 'jersey') ? 'jersey' : 'kaos';
                 }
 
-                if (recColor && (!recColor.value || !hasLoadedRecommendations)) {
+                if (recColor && !recColor.value) {
                     const pref = getCurrentColorPreference();
                     if (pref && pref.name && recColor.querySelector(`option[value="${pref.name}"]`)) {
                         recColor.value = pref.name;
                     }
                 }
+            }
+
+            function resetRecommendationsForModelChange() {
+                // Force sync category
+                syncRecommendationPreferences();
+
+                // Reset recommendation state so user must search again
+                hasLoadedRecommendations = false;
+
+                // Clear results area
+                const recommendationResults = document.getElementById('recommendationResults');
+                if (recommendationResults) {
+                    recommendationResults.innerHTML = `
+                        <div class="h-full flex flex-col items-center justify-center text-center py-12 gap-3">
+                            <div class="text-3xl">🔄</div>
+                            <p class="text-xs font-bold text-slate-700">Kategori berubah!</p>
+                            <p class="text-[10px] text-slate-400">Pilih preferensi dan cari rekomendasi untuk
+                            <span class="font-bold text-indigo-600">${(currentModel === 'jersey') ? 'Jersey Sport' : 'Kaos Polos'}</span>.</p>
+                        </div>
+                    `;
+                }
+
+                // Show filter form and hide summary bar
+                const recFilterCard = document.getElementById('recFilterCard');
+                const recFilterSummaryBar = document.getElementById('recFilterSummaryBar');
+                const recThemeSelect = document.getElementById('recTheme');
+
+                if (recFilterCard) recFilterCard.classList.remove('hidden');
+                if (recFilterSummaryBar) {
+                    recFilterSummaryBar.classList.add('hidden');
+                    recFilterSummaryBar.classList.remove('flex');
+                }
+                // Reset tema agar user memilih ulang
+                if (recThemeSelect) recThemeSelect.value = '';
             }
 
             async function loadRecommendations() {
@@ -3307,8 +3340,8 @@
                 // Sync UI color forms
                 updateModelToggleUI();
 
-                // Sync recommendation category and preferences
-                syncRecommendationPreferences();
+                // Reset recommendations when model changes so user must search for the correct category
+                resetRecommendationsForModelChange();
 
                 // Load design state for new currentModel
                 return loadDesignForCurrentModel();
